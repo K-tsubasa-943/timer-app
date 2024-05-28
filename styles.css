@@ -1,0 +1,66 @@
+/* 基本のCSS */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平方向に中央寄せ */
+    font-family: Arial, sans-serif;
+    height: 100vh; /* ビューポートの高さいっぱいに設定 */
+    margin: 0; /* ボディのデフォルトのマージンをリセット */
+}
+
+section#githubjump {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    padding: 24px;
+}
+
+img#githubMarkSVG {
+    width: 30px;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#timers-container {
+    display: flex;
+    justify-content: center; /* 水平方向に中央寄せ */
+    flex-wrap: wrap; /* タイマーが横並びになります */
+    align-items: flex-start; /* 垂直方向に上寄せ */
+}
+
+.timer {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 220px; /* タイマーの横幅を指定 */
+}
+
+/* パソコン向けの画面設定 */
+@media screen and (min-width: 768px) {
+    body {
+        /* パソコン向けのスタイル設定 */
+        justify-content: center; /* 垂直方向に中央寄せ */
+        align-items: center; /* 水平方向に中央寄せ */
+    }
+
+    /* ここにパソコン向けのその他のスタイルを追加 */
+}
+
+/* スマートフォン向けの画面設定 */
+@media screen and (max-width: 767px) {
+    /* スマートフォン向けの特定のスタイルを追加 */
+    #timers-container {
+        /* スマートフォン向けのスタイル設定 */
+        flex-direction: column; /* タイマーを縦並びに */
+    }
+
+    .timer {
+        /* スマートフォン向けのスタイル設定 */
+        width: 100%; /* タイマーの幅を100%に設定 */
+    }
+}

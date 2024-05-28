@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイマーアプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="githubLinkWrapper">
+        <a href="https://github.com/K-tsubasa-943/timer" target="_blank">
+            <img src="images/github-mark.svg" id="githubMarkSVG" />
+        </a>
+    </section>
+    <div id="controls">
+        <button id="add-timer-button">タイマーを追加</button>
+        <button id="remove-timer-button">タイマーを減らす</button>
+    </div>
+    <div id="timers-container">
+        <!-- 初期状態で1つのタイマーを表示 -->
+        <div class="timer" id="timer-1">
+            <canvas id="canvas-1" width="200" height="200"></canvas>
+            <div id="time-display-1">残り時間: 00:00</div>
+            <div id="elapsed-time-display-1">経過時間: 00:00</div>
+            <input type="text" id="time-input-1" placeholder="分数を入力" pattern="\d*" inputmode="numeric">
+            <button id="start-button-1">スタート</button>
+            <button id="stop-button-1">停止</button>
+            <button id="reset-button-1">リセット</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
